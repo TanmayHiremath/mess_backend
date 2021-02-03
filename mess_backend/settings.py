@@ -79,8 +79,19 @@ WSGI_APPLICATION = 'mess_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
+        'ENGINE': 'django.db.backends.postgresql',
+
+        'NAME': 'mess_db',
+
+        'USER': 'postgres',
+
+        'PASSWORD': 'postgres',
+
+        'HOST': '',
+
+        'PORT': '',
+
     }
 }
 
@@ -122,3 +133,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/images/'

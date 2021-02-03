@@ -7,3 +7,7 @@ class UserSerializer(serializers.ModelSerializer):
       class Meta:
             model= User
             fields='__all__'
+class MonthSerializer(serializers.ModelSerializer):
+      class Meta:
+            model= Month
+            fields='__all__'
